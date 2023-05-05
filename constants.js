@@ -1,0 +1,3 @@
+var CONSTANTS = {
+    DEFAULT_DRAW_WIDTH: 2,
+}
