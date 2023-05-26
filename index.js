@@ -1,6 +1,8 @@
+const app = new DrawingApp();
+
 const buttons = [
     new Button(
-        'erase_tool',
+        'eraser_tool',
         10,
         10,
         100,
@@ -8,8 +10,7 @@ const buttons = [
         '#f00',
         'Eraser',
         function () {
-            btnToggled = this.name;
-            drawButtons();
+            CONSTANTS.btnToggled = this.name;
         }
     ),
     new Button(
@@ -21,8 +22,7 @@ const buttons = [
         '#0f0',
         'Pen',
         function () {
-            btnToggled = this.name;
-            drawButtons();
+            CONSTANTS.btnToggled = this.name;
         }
     ),
     new Button(
@@ -55,8 +55,33 @@ const buttons = [
             }
         }
     ),
+    new Button(
+        'save_artwork',
+        10,
+        250,
+        100,
+        50,
+        '#ff0',
+        'Save',
+        function () {
+            const name = prompt('Save as (name):');
+            artworkManager.saveArtwork(app.canvas, name);
+        }
+    ),
+    new Button(
+        'load_artwork',
+        10,
+        310,
+        100,
+        50,
+        '#ff0',
+        'Load',
+        function () {
+            const name = prompt('Name of canvas to load:');
+            artworkManager.saveArtwork(app.canvas, name);
+        }
+    ),
 ];
 
-const app = new DrawingApp();
 app.buttons = buttons;
 app.drawButtons();

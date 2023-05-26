@@ -8,8 +8,6 @@ class DrawingApp {
         this.setupCanvas();
         this.setupEventListeners();
         this.drawButtons();
-
-        this.btnToggled = 'pen_tool';
     }
 
     setupCanvas() {
@@ -51,7 +49,7 @@ class DrawingApp {
 
         this.ctx.lineWidth = CONSTANTS.DRAW_WIDTH;
         this.ctx.lineCap = 'round';
-        this.ctx.strokeStyle = this.btnToggled === 'eraser_tool' ? 'white' : CONSTANTS.DRAW_COLOR;
+        this.ctx.strokeStyle = CONSTANTS.btnToggled === 'eraser_tool' ? 'black' : CONSTANTS.DRAW_COLOR;
 
         this.ctx.lineTo(x, y);
         this.ctx.stroke();

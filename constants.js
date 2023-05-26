@@ -2,4 +2,5 @@
 var CONSTANTS = {
     DRAW_WIDTH: 2,
     DRAW_COLOR: 'white',
+    btnToggled: 'pen_tool',
 };

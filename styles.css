@@ -1,6 +1,7 @@
 body {
     background-color: black;
     overflow: hidden;
+    cursor:crosshair
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
