@@ -65,6 +65,7 @@ const buttons = [
         'Save',
         function () {
             const name = prompt('Save as (name):');
+            console.log(name);
             artworkManager.saveArtwork(app.canvas, name);
         }
     ),
@@ -78,7 +79,19 @@ const buttons = [
         'Load',
         function () {
             const name = prompt('Name of canvas to load:');
-            artworkManager.saveArtwork(app.canvas, name);
+            artworkManager.loadArtwork(app.canvas, app.ctx, name);
+        }
+    ),
+    new Button(
+        'clear-localstorage',
+        10,
+        370,
+        100,
+        50,
+        '#ff0',
+        'Clear LS',
+        function () {
+            artworkManager.clearLS();
         }
     ),
 ];

@@ -19,12 +19,9 @@ class ArtworkManager {
         console.log('No saved artwork found!');
       }
     }
+
+    clearLS() {
+      localStorage.clear();
+    }
   }
-  
-  // Create an instance of the ArtworkManager class
-  const artworkManager = new ArtworkManager();
-  
-  // Example usage:
-  // Call artworkManager.saveArtwork() to save the current drawing
-  // Call artworkManager.loadArtwork() to load the saved artwork
-  
+    const artworkManager = new ArtworkManager();

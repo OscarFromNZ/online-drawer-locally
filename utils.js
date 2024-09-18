@@ -1,4 +1,4 @@
-// Chat GPT made this for me and it looks so cool
+// this is no longer used lol
 function darkenColor(color, percentage) {
     const num = parseInt(color.slice(1), 16);
     const amt = Math.round(2.55 * percentage);
